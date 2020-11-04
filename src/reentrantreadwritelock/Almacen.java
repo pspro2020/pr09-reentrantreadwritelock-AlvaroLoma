@@ -1,6 +1,6 @@
 package reentrantreadwritelock;
 
-import java.time.LocalDate;
+
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Almacen implements Runnable {
-	private final DateTimeFormatter formato= DateTimeFormatter.ofPattern("HH:mm:ss");
+
 	private List<Producto> stock= new ArrayList<Producto>();
 	private final ReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock(true);
 	private final Lock readLock= reentrantReadWriteLock.readLock();
